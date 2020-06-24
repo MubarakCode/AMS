@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudentName</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js "></script>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous"
+  />
+  
+</head>
+<body>
+    <div class="container-fluid bg-dark">
+        <div class="card">
+            <div class="card-body">
+                <h3><p class="text-center">Student Name</p></h3>
+              <p class="text-center">Computer Sci ND1</p>
+            </div>
+            <div class="card-body">
+              <div class="container">
+                  <canvas id="myChart"></canvas>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+    <!--chart js is used for the pie chart you can populate it with the student details-->
+    <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+        let massPopChart = new Chart(myChart, {
+            type:'pie',
+            data:{
+                labels:['Abia State','Ekiti State','Kwara State','Gombe State'],
+                datasets:[{
+                    label:'Population',
+                    data:[
+                    2,845,380,
+	                2,398,957,
+	                2,365,353,
+		            2,365,040
+                    ],
+                    backgroundColor:[
+                        'pink',
+                        'red',
+                        'yellow',
+                        'blue'
+                    ]
+                }]
+            },
+            options:{}
+        });
+    </script>
+    <div class="container">
+        <div class="row">
+        <button type="button" class="btn btn-primary">Week 1</button>
+        <button type="button" class="btn btn-primary">Week 2</button>
+        <button type="button" class="btn btn-primary">Week 3</button>
+        <button type="button" class="btn btn-primary">Week 4</button>
+        <button type="button" class="btn btn-primary">Week 5</button>
+        <button type="button" class="btn btn-primary">Week 6</button>
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+        <button type="button" class="btn btn-primary">Week 1</button>
+        <button type="button" class="btn btn-primary">Week 2</button>
+        <button type="button" class="btn btn-primary">Week 3</button>
+        <button type="button" class="btn btn-primary">Week 4</button>
+        <button type="button" class="btn btn-primary">Week 5</button>
+        <button type="button" class="btn btn-primary">Week 6</button>
+    </div>
+    </div>
+     
+   </body>
+</html>
